@@ -141,22 +141,26 @@ Published Dashboard:
 Publishing could not be completed due to lack of access to a Microsoft organizational account.
 
 10. Repository Contents
+
 datasets/
-├── sales_transactions.csv
-├── customers.csv
-├── products.csv
-├── branches.csv
-└── date.csv
+sales_transactions.csv
+customers.csv
+products.csv
+branches.csv
+date.csv
 
 screenshots/
-├── sales_performance.png
-├── customer_behaviour.png
-├── product_performance.png
-├── discount_audit.png
-├── data_model.png
+sales_performance.png
+customer_behaviour.png
+product_performance.png
+discount_audit.png
+data_model.png
+
 Roxelle_Capstone.pbix
+
 summary.pdf
+
 README.md
-Roxelle_Capstone.pbix
+
 summary.pdf
 README.md
