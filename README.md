@@ -94,8 +94,6 @@ Several key DAX measures were developed to support business analysis and decisio
 ### Additional Measure Justification
 
 **Average Discount %**
-Revenue After Discount = 
-Quantity × Unit Price × (1 - Discount Percent / 100)
 was created to evaluate discount effectiveness and support the Discount Audit dashboard by monitoring promotional activity across branches.
 
 
