@@ -1,166 +1,214 @@
 # Roxelle
 Data analytics project work
 
-produced by: Abraham Ogboli Osefumnanya
+Poduced by: ABRAHAM OGBOLI OSEFUMNANAYA
 
-1. Project Overview
-Roxelle Nigeria Ltd. Sales & Operations Analytics Dashboard
 
-This project was developed as part of the Power BI Final Year Capstone Assignment. The objective was to transform transactional and operational data from Roxelle Nigeria Ltd. into an interactive business intelligence solution that supports data-driven decision-making.
+# ROXELLE NIGERIA LTD.  
+**Sales & Operations Analytics Dashboard**
 
-The dashboard analyzes sales performance, customer behaviour, product performance, and discount effectiveness across six branches located in Lagos and Abuja.
+**Power BI Final Year Capstone Project**
 
-2. Business Problem
+## 1. Project Overview
+This project was developed as a comprehensive Business Intelligence solution for Roxelle Nigeria Ltd. The objective was to transform raw transactional and operational data into an interactive, insightful Power BI dashboard that supports data-driven decision-making across sales, customer management, product performance, and discount optimization.
 
-Roxelle Nigeria Ltd. faced several business challenges including:
+The dashboard analyzes performance across six branches located in Lagos and Abuja, providing clear visibility into key business metrics and trends.
 
-Limited visibility into branch-level performance
-Uncontrolled discount spending
-High product return rates
-Inefficient product stocking decisions
-Lack of customer behaviour insights
+## 2. Business Problem
+Roxelle Nigeria Ltd. faced several critical challenges, including:
 
-This Power BI solution was designed to address these challenges through interactive reporting and analytical dashboards.
+- Limited visibility into branch-level performance
+- Uncontrolled and inconsistent discount spending
+- High product return rates
+- Inefficient product assortment and stocking decisions
+- Lack of deep customer behaviour and segmentation insights
 
-3. Dataset Description
+This Power BI solution was designed to address these challenges through interactive visualizations and actionable analytics.
 
-The analysis was conducted using five CSV datasets:
+## 3. Dataset Description
+The analysis was built using five (5) CSV datasets:
 
-Dataset	Description
-sales_transactions	Transaction-level sales records
-customers	Customer demographic and loyalty information
-products	Product details, categories and pricing
-branches	Branch information and locations
-date	Calendar table for time intelligence analysis
+| Dataset                | Description                                      |
+|------------------------|--------------------------------------------------|
+| sales_transactions     | Transaction-level sales records                  |
+| customers              | Customer demographics and loyalty information    |
+| products               | Product details, categories, and pricing         |
+| branches               | Branch information and locations                 |
+| date                   | Calendar table for time intelligence             |
 
-4. Power Query Transformations
+## 4. Power Query Transformations
+The following data preparation steps were performed in Power Query:
 
-The following transformations were performed in Power Query:
+- Loaded all five CSV files into Power BI
+- Renamed columns for better readability
+- Assigned appropriate data types to all columns
+- Handled null values and blanks
+- Created **Revenue After Discount** calculated column
+- Removed duplicate records
+- Conducted data quality validation
 
-Loaded all five CSV files into Power BI
-Renamed columns to improve readability
-Assigned appropriate data types to all fields
-Handled null and blank values where applicable
-Created Revenue After Discount column
-Removed duplicate records
-Verified data quality before loading into the model
-Revenue After Discount Formula
-Revenue After Discount =
+**Revenue After Discount Formula:**
+Revenue After Discount = 
 Quantity × Unit Price × (1 - Discount Percent / 100)
 
-5. Data Model Design
+## 5. Data Model Design
 
-A star schema was implemented to improve performance and simplify analysis.
+A **Star Schema** was implemented to optimize performance, simplify analysis, and improve report usability.
 
-Relationships
-Customers → Sales Transactions
-Products → Sales Transactions
-Branches → Sales Transactions
-Date → Sales Transactions
-Cross Filter Direction
+### Key Relationships
 
-Single-direction filtering was used throughout the model.
+* Customers → Sales Transactions (1:*)
+* Products → Sales Transactions (1:*)
+* Branches → Sales Transactions (1:*)
+* Date → Sales Transactions (1:*)
 
-Reason:
-Single-direction relationships improve model performance, reduce ambiguity, and prevent unwanted filter propagation.
-One-to-many relationships were used in the model.
+### Design Principles
 
-6. DAX Measures
+* Single-direction cross-filtering was used throughout the model to improve performance and prevent filter ambiguity.
+* No many-to-many relationships were implemented.
+* Fact and dimension tables were separated following star schema best practices.
 
-The following measures were created:
+### Data Model Screenshot
 
-Total Revenue	Total revenue after discounts
-Total Cost	Total product cost
-Total Profit	Revenue minus cost
-Profit Margin %	Profitability percentage
-Total Transactions	Distinct transaction count
-Return Rate %	Percentage of returned transactions
-Avg Basket Size	Revenue per transaction
-MoM Revenue %	Month-over-month revenue growth
-Average Discount %	Average discount percentage applied
+<img src="data model.png" alt="Data Model" width="800">
 
-Additional Measure Justification:
-Average Discount % was created to evaluate the effectiveness of promotional activities and support discount audit analysis.
+---
 
-7. Dashboard Pages
-Page 1 – Sales Performance
+## 6. DAX Measures
 
-Provides visibility into:
+Several key DAX measures were developed to support business analysis and decision-making.
 
-Revenue
-Profit
-Profit Margin
-Branch Performance
-Sales Trends
-Category Contribution
+| Measure                   | Purpose                                 |
+| ------------------------- | --------------------------------------- |
+| Total Revenue             | Total revenue generated after discounts |
+| Total Cost                | Total cost of products sold             |
+| Total Profit              | Revenue minus cost                      |
+| Profit Margin %           | Overall profitability percentage        |
+| Total Transactions        | Count of distinct transactions          |
+| Return Rate %             | Percentage of returned products         |
+| Avg Basket Size           | Average revenue per transaction         |
+| MoM Revenue %             | Month-over-month revenue growth         |
+| Average Discount %        | Average discount percentage applied     |
+| Revenue Lost to Discounts | Total value lost due to discounts       |
 
-Page 2 – Customer Behaviour
+### Additional Measure Justification
 
-Provides insights into:
+**Average Discount %** was created to evaluate discount effectiveness and support the Discount Audit dashboard by monitoring promotional activity across branches.
 
-Customer Segments
-Loyalty Programme Performance
-Customer Demographics
-Geographic Distribution
-Average Basket Size
+---
 
-Page 3 – Product Performance
+## 7. Dashboard Pages
 
-Provides insights into:
+### Page 1 – Sales Performance
 
-Top and Bottom Products
-Product Return Rates
-Category Profitability
-Product Contribution Analysis
+Focuses on:
 
-Page 4 – Discount Audit
+* Total Revenue
+* Total Profit
+* Profit Margin
+* Branch Performance
+* Monthly Revenue Trends
+* Category Contribution
 
-Provides insights into:
+<img src="sale 1.png" alt="Sales Performance Dashboard" width="800">
 
-Discount Impact
-Branch Discount Activity
-Discount Effectiveness
-Basket Size Analysis
-Payment Method Behaviour
-8. Key Insights & Recommendations
-Key Findings
-Surulere Branch generated the highest revenue contribution.
-Food & Beverages was the strongest-performing product category.
-Loyalty customers demonstrated stronger purchasing behaviour.
-Several products exhibited elevated return rates.
-Discounts increased basket size but did not always result in proportional revenue growth.
-Recommendations
-Increase focus on high-performing product categories.
-Review low-performing and high-return products.
-Expand loyalty programme adoption.
-Optimize discount policies across branches.
-Continue monitoring profitability alongside revenue growth.
+---
 
-9. Power BI Service Link
-Published Dashboard:
-Publishing could not be completed due to lack of access to a Microsoft organizational account.
+### Page 2 – Customer Behaviour
 
-10. Repository Contents
+Analyzes:
 
-datasets/
-sales_transactions.csv
-customers.csv
-products.csv
-branches.csv
-date.csv
+* Customer Segments
+* Loyalty Programme Effectiveness
+* Customer Demographics
+* Age Group Distribution
+* Geographic Distribution
 
-screenshots/
-sales_performance.png
-customer_behaviour.png
-product_performance.png
-discount_audit.png
-data_model.png
+<img src="customer 2.png" alt="Customer Behaviour Dashboard" width="800">
 
-Roxelle_Capstone.pbix
+---
 
-summary.pdf
+### Page 3 – Product Performance
 
-README.md
+Highlights:
 
-summary.pdf
-README.md
+* Top Products by Revenue
+* Bottom Products by Revenue
+* Product Return Rates
+* Category Profitability
+
+<img src="products 2.png" alt="Product Performance Dashboard" width="800">
+
+---
+
+### Page 4 – Discount Audit
+
+Evaluates:
+
+* Revenue Lost to Discounts
+* Discount Distribution by Branch
+* Discount Impact on Sales
+* Promotional Effectiveness
+
+<img src="discount 2.png" alt="Discount Audit Dashboard" width="800">
+
+---
+
+## 8. Key Insights & Recommendations
+
+### Key Findings
+
+* **Surulere Branch** generated the highest revenue contribution across all branches.
+* **Food & Beverages** was the strongest-performing category, contributing approximately **37.18%** of total revenue.
+* Total company revenue reached approximately **₦76 Million**.
+* Total profit generated was approximately **₦25 Million**.
+* Overall profit margin stood at **33.26%**, indicating strong profitability.
+* **Loyal Customers** emerged as the highest-value customer segment.
+* The **36–45 age group** represented the largest customer demographic.
+* Product return rate was **10.68%**, highlighting opportunities for product quality and inventory improvements.
+* Approximately **₦2 Million** in revenue was lost through discounting activities.
+
+### Recommendations
+
+1. Prioritize investment and marketing efforts in high-performing categories, particularly Food & Beverages.
+2. Strengthen the Loyalty Programme to improve customer retention and lifetime value.
+3. Review low-performing and high-return products for possible repositioning or discontinuation.
+4. Standardize discount policies across branches to minimize unnecessary revenue leakage.
+5. Continue leveraging Power BI dashboards for ongoing performance monitoring and strategic decision-making.
+
+---
+
+## 9. Power BI Service Link
+
+### Published Dashboard
+
+Due to Microsoft Power BI Service organizational account requirements, the PBIX file has been provided within this repository for direct review.
+
+If a published Power BI Service link becomes available, it will be added here.
+
+---
+
+## 10. Repository Contents
+
+```text
+Roxelle_Capstone/
+├── datasets/
+│   ├── sales_transactions.csv
+│   ├── customers.csv
+│   ├── products.csv
+│   ├── branches.csv
+│   └── date.csv
+│
+├── screenshots/
+│   ├── sales_performance.png
+│   ├── customer_behaviour.png
+│   ├── product_performance.png
+│   ├── discount_audit.png
+│   ├── data_model.png
+│   └── scheduled_refresh.png
+│
+├── Roxelle_Capstone.pbix
+├── Project_Summary.pdf
+└── README.md
+```
+
