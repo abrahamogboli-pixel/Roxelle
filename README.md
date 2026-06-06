@@ -70,7 +70,7 @@ A **Star Schema** was implemented to optimize performance, simplify analysis, an
 
 ### Data Model Screenshot
 
-<img src="data model.png" alt="Data Model" width="800">
+<img src="model.png" alt="Data Model" width="800">
 
 ---
 
@@ -93,7 +93,9 @@ Several key DAX measures were developed to support business analysis and decisio
 
 ### Additional Measure Justification
 
-**Average Discount %** was created to evaluate discount effectiveness and support the Discount Audit dashboard by monitoring promotional activity across branches.
+**Average Discount %**
+was created to evaluate discount effectiveness and support the Discount Audit dashboard by monitoring promotional activity across branches.
+
 
 ---
 
@@ -110,7 +112,7 @@ Focuses on:
 * Monthly Revenue Trends
 * Category Contribution
 
-<img src="sale 1.png" alt="Sales Performance Dashboard" width="800">
+<img src="sales_performence.png" alt="Sales Performance Dashboard" width="800">
 
 ---
 
@@ -124,7 +126,7 @@ Analyzes:
 * Age Group Distribution
 * Geographic Distribution
 
-<img src="customer 2.png" alt="Customer Behaviour Dashboard" width="800">
+<img src="cutomer_behabiour.png" alt="Customer Behaviour Dashboard" width="800">
 
 ---
 
@@ -137,7 +139,7 @@ Highlights:
 * Product Return Rates
 * Category Profitability
 
-<img src="products 2.png" alt="Product Performance Dashboard" width="800">
+<img src="product_performance.png" alt="Product Performance Dashboard" width="800">
 
 ---
 
@@ -150,7 +152,7 @@ Evaluates:
 * Discount Impact on Sales
 * Promotional Effectiveness
 
-<img src="discount 2.png" alt="Discount Audit Dashboard" width="800">
+<img src="discount_audit.png" alt="Discount Audit Dashboard" width="800">
 
 ---
 
